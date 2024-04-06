@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvc4dvakqv3wl"]
+
+[ext_resource type="PackedScene" uid="uid://bqnfdqasospbb" path="res://scene/Character/Player.tscn" id="1_o5mou"]
+[ext_resource type="PackedScene" uid="uid://6oa12k4vlbig" path="res://scene/Manager/Inventory/Item.tscn" id="2_d0pb7"]
+[ext_resource type="Resource" uid="uid://bpydh1l5fccr1" path="res://resources/items/Healthpack.tres" id="3_7u2eq"]
+[ext_resource type="PackedScene" uid="uid://ys1halceyjag" path="res://scene/Manager/Inventory/InventoryUI.tscn" id="4_84ib0"]
+[ext_resource type="Resource" uid="uid://dmah65w7y3ovu" path="res://resources/items/Floralstaff.tres" id="5_e0mpt"]
+
+[node name="Void" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Inventory_UI" parent="CanvasLayer" instance=ExtResource("4_84ib0")]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 576.0
+offset_bottom = 324.0
+color = Color(0.807843, 0.909804, 0.941176, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 26.0
+offset_top = 50.0
+offset_right = 66.0
+offset_bottom = 90.0
+color = Color(1, 0.215686, 1, 1)
+
+[node name="Player" parent="." instance=ExtResource("1_o5mou")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+visible = false
+position_smoothing_speed = 100.0
+
+[node name="Item" parent="." instance=ExtResource("2_d0pb7")]
+position = Vector2(98, 0)
+item_data = ExtResource("3_7u2eq")
+
+[node name="Item3" parent="." instance=ExtResource("2_d0pb7")]
+position = Vector2(140, 0)
+item_data = ExtResource("3_7u2eq")
+
+[node name="Item2" parent="." instance=ExtResource("2_d0pb7")]
+position = Vector2(119, 0)
+item_data = ExtResource("5_e0mpt")

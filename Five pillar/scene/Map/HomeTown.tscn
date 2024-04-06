@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvhn06nbbn2mo"]
+
+[ext_resource type="Texture2D" uid="uid://bns4l6a1ot7rd" path="res://assets/art/HomeTown.png" id="1_xdayu"]
+[ext_resource type="PackedScene" uid="uid://bqnfdqasospbb" path="res://scene/Character/Player.tscn" id="2_0omlr"]
+
+[node name="HomeTown" type="Node2D"]
+position = Vector2(288, 162)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_xdayu")
+
+[node name="Player" parent="." instance=ExtResource("2_0omlr")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]

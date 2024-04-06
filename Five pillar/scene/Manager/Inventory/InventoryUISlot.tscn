@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckoe27v1h56wf"]
+
+[ext_resource type="Script" path="res://scene/Manager/Inventory/InventoryUISlot.gd" id="1_l34oe"]
+[ext_resource type="Material" uid="uid://ckqv3o1nfs54p" path="res://assets/shader/PixelShader.tres" id="2_ijoqu"]
+
+[node name="InventoryUISlot" type="Panel"]
+custom_minimum_size = Vector2(16, 16)
+anchors_preset = -1
+anchor_right = 0.056
+anchor_bottom = 0.099
+offset_right = -0.128
+offset_bottom = -0.038002
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_l34oe")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = ExtResource("2_ijoqu")
+position = Vector2(8, 8)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 10.0
+offset_right = 57.0
+offset_bottom = 33.0
+scale = Vector2(0.25, 0.25)
+text = "00"
+horizontal_alignment = 2
+vertical_alignment = 2

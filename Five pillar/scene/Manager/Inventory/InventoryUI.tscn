@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://ys1halceyjag"]
+
+[ext_resource type="Script" path="res://scene/Manager/Inventory/InventoryUI.gd" id="1_owpd8"]
+[ext_resource type="PackedScene" uid="uid://ckoe27v1h56wf" path="res://scene/Manager/Inventory/InventoryUISlot.tscn" id="2_tg0wn"]
+
+[node name="Inventory_UI" type="Control"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -216.0
+offset_top = -243.0
+offset_right = 216.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_owpd8")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -68.0
+offset_top = 61.0
+offset_right = 68.0
+offset_bottom = -61.0
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 6
+
+[node name="InventoryUISlot" parent="PanelContainer/GridContainer" instance=ExtResource("2_tg0wn")]
+layout_mode = 2
+
+[node name="InventoryUISlot2" parent="PanelContainer/GridContainer" instance=ExtResource("2_tg0wn")]
+layout_mode = 2

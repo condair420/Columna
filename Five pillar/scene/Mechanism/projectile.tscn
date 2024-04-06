@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://cuiiekgbn4l5d"]
+
+[ext_resource type="Script" path="res://scene/Mechanism/Projectile.gd" id="1_135bq"]
+[ext_resource type="Texture2D" uid="uid://dwyiay1nsklp8" path="res://assets/art/leaf_p.png" id="2_fpuet"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5ntqx"]
+
+[sub_resource type="Animation" id="Animation_nwxvu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_mhskc"]
+resource_name = "idle"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dqesr"]
+_data = {
+"RESET": SubResource("Animation_nwxvu"),
+"idle": SubResource("Animation_mhskc")
+}
+
+[node name="Projectile" type="Area2D" groups=["attack"]]
+script = ExtResource("1_135bq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5ntqx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -2.35619
+texture = ExtResource("2_fpuet")
+vframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_dqesr")
+}
+autoplay = "idle"
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

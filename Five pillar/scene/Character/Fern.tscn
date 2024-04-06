@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://qevcxgiephex"]
+
+[ext_resource type="Script" path="res://scene/Character/old_enemy_template.gd" id="1_wktk0"]
+[ext_resource type="Texture2D" uid="uid://c17tjhvgqn0go" path="res://assets/art/fern.png" id="2_bccif"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b6a04"]
+radius = 29.0689
+
+[node name="Fern" type="Node2D"]
+script = ExtResource("1_wktk0")
+
+[node name="Area2D" type="Area2D" parent="." groups=["enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_b6a04")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -53.0
+offset_top = 40.0
+offset_bottom = 63.0
+text = "enemy"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_bccif")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

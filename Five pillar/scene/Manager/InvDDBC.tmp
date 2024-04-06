@@ -1,0 +1,359 @@
+[gd_scene load_steps=5 format=3 uid="uid://ig6obq11fkav"]
+
+[ext_resource type="Script" path="res://scene/Manager/InventorySystem.gd" id="1_6tfat"]
+[ext_resource type="Script" path="res://scene/Manager/InventorySlot.gd" id="1_lg0or"]
+[ext_resource type="Resource" uid="uid://cjewgy6vrhbu" path="res://SaveData.tres" id="2_xxcaa"]
+[ext_resource type="Script" path="res://scene/Manager/HotbarSlot.gd" id="3_e5fkm"]
+
+[node name="InventorySystem" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6tfat")
+data = ExtResource("2_xxcaa")
+
+[node name="Hotbar" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 240.0
+offset_top = 288.0
+offset_right = -240.0
+offset_bottom = -5.0
+grow_horizontal = 0
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Hotbar"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Hotbar" type="PanelContainer" parent="Hotbar/HBoxContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("3_e5fkm")
+
+[node name="Hotbar2" type="PanelContainer" parent="Hotbar/HBoxContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("3_e5fkm")
+
+[node name="Hotbar3" type="PanelContainer" parent="Hotbar/HBoxContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("3_e5fkm")
+
+[node name="Hotbar4" type="PanelContainer" parent="Hotbar/HBoxContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("3_e5fkm")
+
+[node name="Inventory" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 200.0
+offset_top = 112.0
+offset_right = -200.0
+offset_bottom = -110.0
+grow_horizontal = 0
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="GridContainer" type="GridContainer" parent="Inventory"]
+custom_minimum_size = Vector2(150, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 8
+
+[node name="ItemContainer" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer2" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer3" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer4" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer5" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer6" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer7" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer8" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer9" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer10" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer11" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer12" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer13" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer14" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer15" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer16" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer17" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer18" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer19" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer20" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer21" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer22" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer23" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer24" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer25" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer26" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer27" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer28" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer29" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer30" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer31" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="ItemContainer32" type="PanelContainer" parent="Inventory/GridContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_lg0or")
+type = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 208.0
+offset_top = 72.0
+offset_right = 240.0
+offset_bottom = 102.0
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="InventorySlot" type="PanelContainer" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+script = ExtResource("1_lg0or")
+type = 1
